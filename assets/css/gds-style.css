@@ -1,0 +1,118 @@
+.gds-container {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+#gds-log p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+input, select, button {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    max-width: 400px;
+}
+label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.gds-calibre-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gds-calibre-btn {
+    padding: 8px 14px;
+    background-color: #eaeaea;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+}
+
+.gds-calibre-btn.active {
+    background-color: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
+.gds-calibre-btn:hover {
+    background-color: #d7d7d7;
+}
+.gds-calibre-btn {
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.gds-calibre-btn.active {
+    background-color: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 2px rgba(0, 115, 170, 0.2);
+}
+
+/* ✅ mini tick après clic */
+.gds-calibre-btn::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: limegreen;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.2s ease;
+}
+
+.gds-calibre-btn.active::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* 🧱 Conteneur en 2 colonnes flexibles */
+.gds-calibre-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+}
+
+/* 🎯 Bouton compact */
+.gds-calibre-btn {
+    flex: 0 0 calc(50% - 10px); /* 2 colonnes */
+    padding: 6px 10px;
+    font-size: 13px;
+    background-color: #eaeaea;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.gds-calibre-btn.active {
+    background-color: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
+@media (max-width: 480px) {
+    .gds-calibre-btn {
+        flex: 0 0 100%;
+    }
+}
+
+.tablenav-pages a.button {
+    min-width: 30px;
+    text-align: center;
+    padding: 3px 10px;
+}
+
